@@ -1,0 +1,92 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #cdeca4; /* Light gray background */
+    color: #333; /* Dark text color */
+    text-align: center;
+    margin: 0;
+    padding: 50px;
+}
+
+/* Quote  */
+#quote {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #bac4e4; /* White background for quote */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Animation for scaling and background */
+}
+
+/* Buttons */
+button {
+    background-color: #3498db; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    animation: pulse 2s infinite; /* Pulse effect */
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #2980b9; /* Darker blue */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        background-color: #e0f04f; /* Original color */
+    }
+    50% {
+        background-color: #87e7d4; /* Change to teal */
+    }
+}
+
+/* Keyframes for Quote Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(-20px); /* Slide up */
+    }
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+/* Applying Animation to Quote */
+#quote {
+    animation: fadeIn 0.5s ease forwards; /* Apply fade-in effect */
+}
+
+/* Quote Hover Effect */
+#quote:hover {
+    background-color: #ecb8cb; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/*  Responsive Design */
+@media (max-width: 600px) {
+    #quote {
+        font-size: 20px; /* Smaller font size on mobile */
+    }
+    button {
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 16px; /* Smaller font size */
+    }
+}
